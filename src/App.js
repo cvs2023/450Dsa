@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Main>
         <Navbar />
-        {/* <SecondNav /> */}
+        <SecondNav />
 
         <Routes>
           <Route path="/" element={<Topic />} />

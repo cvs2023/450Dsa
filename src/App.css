@@ -47,14 +47,30 @@
   color: rgb(14, 21, 28);
 }
 .second-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
   border-bottom: 0px solid white;
-  transition: border-bottom 0.24s ease-in-out, transform 0.55s ease-in;
+  /* transition: border-bottom 0.24s ease-in-out, transform 0.55s ease-in; */
   margin-bottom: 30px;
   height: 10px;
+  color: #ffffff;
 }
+.second-nav button {
+  width: 90px;
+  height: 27px;
+  background-color: #ffffff;
+  /* background-color: #d36135; */
+  outline: none;
+  border: none;
+  border-radius: 0.1rem;
+  box-shadow: 1px 0px 1px rgb(222, 212, 171);
+}
+
 .second-nav:hover {
-  border-bottom: 1px solid rgb(255, 255, 255);
-  transition: border-bottom 0.24s ease-in-out, transform 0.55s ease-in;
+  /* border-bottom: 1px solid rgb(255, 255, 255); */
+  /* transition: border-bottom 0.24s ease-in-out, transform 0.55s ease-in; */
   transform: scaleX(0);
 }
 .grid {
