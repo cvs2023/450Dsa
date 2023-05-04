@@ -10,11 +10,18 @@ function App() {
     <div className="App">
       <Main>
         <Navbar />
-        <SecondNav />
-        <Topic />
+        {/* <SecondNav /> */}
 
         <Routes>
-          <Route path="/" element={<Arrays />} />
+          <Route path="/" element={<Topic />} />
+          <Route path="/home" element={<Topic />} />
+          <Route path="/Arrays" element={<Topic />} />
+          <Route path="/LinkedList" element={<Topic />} />
+          <Route path="/Strings" element={<Topic />} />
+          <Route path="/Recursion" element={<Topic />} />
+          <Route path="/Trees" element={<Topic />} />
+          <Route path="/Dp" element={<Topic />} />
+          <Route path="/Graphs" element={<Topic />} />
         </Routes>
       </Main>
       <div></div>

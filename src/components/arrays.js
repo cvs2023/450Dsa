@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Nest from "./nest";
-
+import { Topic } from "./topics";
 const Arrays = ({ select }) => {
-  const topic = select?.topic;
-
+  const [data, setData] = useState("");
   //fetch data of this topic and pass to jsx
-  // console.log(topic);
 
+  useEffect(() => {
+    const topic = select?.topic;
+    setData(topic);
+  }, []);
   return (
     <div>
-      <div>{topic && <Nest select={select} />}</div>
+      <div>{data ? <Nest select={select} /> : <Topic />}</div>
     </div>
   );
 };

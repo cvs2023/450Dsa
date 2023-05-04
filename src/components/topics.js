@@ -3,7 +3,8 @@ import { dataObj } from "../data/data";
 import SelectedTopic from "./selectedTopic";
 import { Link } from "react-router-dom";
 import Arrays from "./arrays";
-
+import { Ref } from "react";
+import Nest from "./nest";
 export const Topic = () => {
   const [data, setData] = useState(dataObj);
   const [select, setSelect] = useState({});
@@ -11,27 +12,28 @@ export const Topic = () => {
 
   const handleClick = (i) => {
     setSelect(i);
-    setShow(false);
+    setShow(!show);
   };
-
+  console.log({ show });
   return (
     <div className="grid">
-      {show &&
+      {show ? (
         data.map((i) => {
           return (
             <>
-              <Link to={i.topic}>
+              <Link className="text-deco" to={`/${i.topic}`}>
                 <div onClick={() => handleClick(i)} className="grid-child">
                   <div>{i.topic}</div>
-                  <div> {i.questions}</div>
-                  <div> {i.id} </div>
+                  <div> Total {i.questions}</div>
+                  <div> Solved {i.id} </div>
                 </div>
               </Link>
             </>
           );
-        })}
-
-      {show == false ? <Arrays select={select} show={show} /> : ""}
+        })
+      ) : (
+        <Nest select={select} handleClick={handleClick} />
+      )}
     </div>
   );
 };
