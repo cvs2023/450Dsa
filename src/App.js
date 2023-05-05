@@ -15,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Topic />} />
           <Route path="/home" element={<Topic />} />
+          <Route path="/TimeComplexity" element={<Topic />} />
+
           <Route path="/Arrays" element={<Topic />} />
           <Route path="/LinkedList" element={<Topic />} />
           <Route path="/Strings" element={<Topic />} />

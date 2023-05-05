@@ -1,5 +1,10 @@
 export const dataObj = [
   {
+    id: 0,
+    questions: 20,
+    topic: "TimeComplexity",
+  },
+  {
     id: 1,
     questions: 20,
     topic: "Arrays",
@@ -34,5 +39,17 @@ export const dataObj = [
     questions: 30,
 
     topic: "Dp",
+  },
+  {
+    id: 8,
+    questions: 30,
+
+    topic: "Maths",
+  },
+  {
+    id: 9,
+    questions: 30,
+
+    topic: "Bit Manipulation",
   },
 ];
