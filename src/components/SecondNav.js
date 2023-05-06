@@ -3,20 +3,11 @@ import { Link } from "react-router-dom";
 
 export const SecondNav = () => {
   return (
-    <div>
+    <div className="navbar">
       <div className="second-nav">
-        <Link style={{ textDecoration: "none" }}>
-          <p className=""> All</p>
-        </Link>
-        <Link style={{ textDecoration: "none" }}>
-          <p className=""> Beginner</p>
-        </Link>
-        <Link style={{ textDecoration: "none" }}>
-          <p className=""> Medium</p>
-        </Link>
-        <Link style={{ textDecoration: "none" }}>
-          <p className=""> Advanced</p>
-        </Link>
+        <Link>Beginner</Link>
+        <Link>Medium</Link>
+        <Link>Advanced</Link>
       </div>
     </div>
   );

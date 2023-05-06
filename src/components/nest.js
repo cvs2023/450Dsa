@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { questionsBank } from "../data/questionBank";
-const Nest = ({ select, handleClick }) => {
+const Nest = ({ select, handleClick, show }) => {
   const [data, setData] = useState(questionsBank);
 
   const handleBack = () => {
@@ -20,7 +20,6 @@ const Nest = ({ select, handleClick }) => {
         <Link to="/home">
           <button onClick={handleBack}>Back</button>
         </Link>
-        {/* <div>TOPIC &nbsp;{select?.topic}</div> */}
       </div>
 
       <div className="box">

@@ -6,6 +6,9 @@ import { Navbar } from "./components/navbar";
 import { SecondNav } from "./components/SecondNav";
 import Arrays from "./components/arrays";
 function App() {
+  //prop
+  //useref/usereducer
+  //js
   return (
     <div className="App">
       <Main>

@@ -21,9 +21,9 @@ export const Topic = () => {
         data.map((i) => {
           return (
             <>
-              <Link className="text-deco" to={`/${i.topic}`}>
-                <div onClick={() => handleClick(i)} className="grid-child">
-                  <div>SOLVE NOW</div>
+              <Link className="" to={`/${i.topic}`}>
+                <div onClick={() => handleClick(i)} className="grid-child ">
+                  <div className=" text-deco">SOLVE NOW</div>
                   <div>{i.topic}</div>
                   <div> Total {i.questions}</div>
                   <div> Solved {i.id} </div>
@@ -33,7 +33,7 @@ export const Topic = () => {
           );
         })
       ) : (
-        <Nest select={select} handleClick={handleClick} />
+        <Nest select={select} show={show} handleClick={handleClick} />
       )}
     </div>
   );

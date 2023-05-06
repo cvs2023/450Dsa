@@ -1,24 +1,43 @@
 import React, { useState } from "react";
 import logo1 from "../data/logo1.jpg";
 import { Link } from "react-router-dom/dist";
+
+import climbBlue from "../images/climb-blue.png";
 export const Navbar = () => {
+  const [hover, setHover] = useState(false);
   const path = window.location.pathname;
   // console.log(path);
 
   return (
-    <div className="navbar">
-      {/* <div className="first">
-        <Link to="/home">
-          <img className="img-logo" src={logo1} />{" "}
+    <div className="">
+      <div
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
+      >
+        {hover ? (
+          <div className="top">
+            "You have a right to perform your prescribed duty, but you are not
+            entitled to the fruits of your actions."
+          </div>
+        ) : (
+          <div className="top">कर्मण्येवाधिकारस्ते मां फलेषु कदाचन</div>
+        )}
+      </div>
+
+      <div className="second-portion">
+        <img className="img" src={climbBlue}></img>
+      </div>
+
+      <div className="second ">
+        <Link className="link-hover" to="/home">
+          Home{" "}
         </Link>
-      </div> */}
-      <div className="second">
-        {/* <p className="you-can">You can</p> */}
-        {/* <Link to="/home">Home </Link> */}
-        <div> "मुस्कुराते चलो , बढ़ते चलो ।"</div>
-        {/* <button>Home</button>
-        <button>Login</button>
-        <button>Signup</button> */}
+        <Link className="link-hover" to="/home">
+          Login{" "}
+        </Link>
+        <Link className="link-hover" to="/home">
+          Signup{" "}
+        </Link>
       </div>
     </div>
   );
