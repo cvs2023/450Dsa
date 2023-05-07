@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { questionsBank } from "../data/questionBank";
-const Nest = ({ select, handleClick, show }) => {
+
+const Nest = ({ select, handleClick }) => {
   const [data, setData] = useState(questionsBank);
 
   const handleBack = () => {
@@ -11,8 +12,9 @@ const Nest = ({ select, handleClick, show }) => {
     const resp = data.filter((i) => i.name == select);
     setData(resp);
   };
+
   useEffect(() => {
-    fetchRequiredData();
+    // firstClick();
   }, []);
   return (
     <div className="">

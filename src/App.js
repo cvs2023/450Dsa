@@ -4,11 +4,12 @@ import { BrowserRouter as Main, Route, Routes } from "react-router-dom";
 import { Topic } from "./components/topics";
 import { Navbar } from "./components/navbar";
 import { SecondNav } from "./components/SecondNav";
-import Arrays from "./components/arrays";
+
 function App() {
   //prop
   //useref/usereducer
   //js
+  // console.log(window.location.pathname);
   return (
     <div className="App">
       <Main>

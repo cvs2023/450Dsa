@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { dataObj } from "../data/data";
 import SelectedTopic from "./selectedTopic";
 import { Link } from "react-router-dom";
@@ -12,9 +12,15 @@ export const Topic = () => {
 
   const handleClick = (i) => {
     setSelect(i?.topic);
-
     setShow(!show);
   };
+
+  const handleClickShow = () => {
+    console.log("handle click show  " + show);
+    setShow(false);
+  };
+
+  useEffect(() => {});
   return (
     <div className="container">
       {show ? (
@@ -33,7 +39,11 @@ export const Topic = () => {
           );
         })
       ) : (
-        <Nest select={select} show={show} handleClick={handleClick} />
+        <Nest
+          select={select}
+          handleClickShow={handleClickShow}
+          handleClick={handleClick}
+        />
       )}
     </div>
   );
