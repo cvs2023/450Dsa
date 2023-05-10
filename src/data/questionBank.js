@@ -5,22 +5,27 @@ export const questionsBank = [
     questions: [
       {
         no: 1,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 2,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 3,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 4,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 5,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
     ],
@@ -31,48 +36,58 @@ export const questionsBank = [
     questions: [
       {
         no: 1,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 2,
+        level: "Medium",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 3,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 4,
+        level: "Medium",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 5,
+        level: "Advanced",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
     ],
   },
   {
     id: 3,
-    name: "TimeComplexity",
+    name: "Strings",
     questions: [
       {
         no: 1,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 2,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 3,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 4,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
       {
         no: 5,
+        level: "Beginner",
         link: "https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1",
       },
     ],

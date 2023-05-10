@@ -1,33 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { dataObj } from "../data/data";
-import SelectedTopic from "./selectedTopic";
 import { Link } from "react-router-dom";
-import Arrays from "./arrays";
 import Nest from "./nest";
 
-export const Topic = () => {
+export const Topic = ({ levelData }) => {
+  console.log({ levelData });
   const [data, setData] = useState(dataObj);
-  const [select, setSelect] = useState("");
+  const [selectTopic, setSelectTopic] = useState("");
   const [show, setShow] = useState(true);
 
   const handleClick = (i) => {
-    setSelect(i?.topic);
+    setSelectTopic(i?.topic);
     setShow(!show);
   };
 
   const handleClickShow = () => {
-    console.log("handle click show  " + show);
     setShow(false);
   };
 
-  useEffect(() => {});
   return (
     <div className="main-container">
       <div className="container">
         {show ? (
-          data.map((i) => {
+          data.map((i, index) => {
             return (
-              <>
+              <div key={index}>
                 <Link className="" to={`/${i.topic}`}>
                   <div onClick={() => handleClick(i)} className="grid-child ">
                     <div className=" text-deco">SOLVE NOW</div>
@@ -36,12 +33,12 @@ export const Topic = () => {
                     <div> Solved {i.id} </div>
                   </div>
                 </Link>
-              </>
+              </div>
             );
           })
         ) : (
           <Nest
-            select={select}
+            selectTopic={selectTopic}
             handleClickShow={handleClickShow}
             handleClick={handleClick}
           />

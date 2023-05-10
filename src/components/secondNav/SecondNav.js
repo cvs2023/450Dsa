@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { secondNavData } from "../../data/secondNavData";
 export const SecondNav = () => {
+  const [levelData, setLevelData] = useState("");
+
+  const handleClick = (levelSelected) => {
+    // const resp = dataObj.filter((i) => i.level == levelSelected);
+    // console.log(resp);
+    console.log("chla  ", levelSelected);
+    setLevelData(levelSelected);
+  };
+
+  useEffect(() => {
+    handleClick();
+  });
   return (
-    <div className="navbar">
-      <div className="second-nav">
-        <Link>Beginner</Link>
-        <Link>Medium</Link>
-        <Link>Advanced</Link>
+    <>
+      <div className="navbar">
+        <div className="second-nav">
+          {secondNavData.map((i, index) => {
+            return (
+              <div onClick={() => handleClick(i.name)} key={index}>
+                <Link>{i.name}</Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 /*

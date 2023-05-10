@@ -2,19 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { questionsBank } from "../data/questionBank";
 
-const Nest = ({ select, handleClick }) => {
+const Nest = ({ selectTopic, handleClick }) => {
   const [data, setData] = useState(questionsBank);
 
   const handleBack = () => {
     handleClick();
   };
+
   const fetchRequiredData = () => {
-    const resp = data.filter((i) => i.name == select);
+    const resp = data.filter((i) => i.name === selectTopic);
     setData(resp);
   };
 
   useEffect(() => {
-    // firstClick();
+    // indexDBCycle();
+    fetchRequiredData();
   }, []);
   return (
     <div className="">
@@ -25,14 +27,14 @@ const Nest = ({ select, handleClick }) => {
       </div>
 
       <div className="box">
-        {data.map((i) => {
+        {data.map((i, index) => {
           return (
-            <div>
+            <div key={index}>
               <div className="box-questions"> {i.name}</div>
               <div className="">
-                {i.questions.map((j) => {
+                {i.questions.map((j, idx) => {
                   return (
-                    <div className="flex-inside">
+                    <div key={idx} className="flex-inside">
                       <div>{j.no} :</div>
                       <a href={j.link} target="blank">
                         <div>Find minimum and maximum element in an array</div>

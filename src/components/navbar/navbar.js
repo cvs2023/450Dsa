@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import logo1 from "../data/logo1.jpg";
 import { Link } from "react-router-dom/dist";
 
-import climbBlue from "../images/climb-blue.png";
+import climbBlue from "../../images/climb-blue.png";
 export const Navbar = () => {
   const [hover, setHover] = useState(false);
   const path = window.location.pathname;
