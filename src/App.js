@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Main, Route, Routes } from "react-router-dom";
 import { Topic } from "./components/topics";
 import { Navbar } from "./components/navbar";
-import { SecondNav } from "./components/SecondNav";
+import { SecondNav } from "./components/secondNav/SecondNav";
 
 function App() {
   //prop

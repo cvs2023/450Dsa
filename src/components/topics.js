@@ -22,29 +22,31 @@ export const Topic = () => {
 
   useEffect(() => {});
   return (
-    <div className="container">
-      {show ? (
-        data.map((i) => {
-          return (
-            <>
-              <Link className="" to={`/${i.topic}`}>
-                <div onClick={() => handleClick(i)} className="grid-child ">
-                  <div className=" text-deco">SOLVE NOW</div>
-                  <div>{i.topic}</div>
-                  <div> Total {i.questions}</div>
-                  <div> Solved {i.id} </div>
-                </div>
-              </Link>
-            </>
-          );
-        })
-      ) : (
-        <Nest
-          select={select}
-          handleClickShow={handleClickShow}
-          handleClick={handleClick}
-        />
-      )}
+    <div className="main-container">
+      <div className="container">
+        {show ? (
+          data.map((i) => {
+            return (
+              <>
+                <Link className="" to={`/${i.topic}`}>
+                  <div onClick={() => handleClick(i)} className="grid-child ">
+                    <div className=" text-deco">SOLVE NOW</div>
+                    <div>{i.topic}</div>
+                    <div> Total {i.questions}</div>
+                    <div> Solved {i.id} </div>
+                  </div>
+                </Link>
+              </>
+            );
+          })
+        ) : (
+          <Nest
+            select={select}
+            handleClickShow={handleClickShow}
+            handleClick={handleClick}
+          />
+        )}
+      </div>
     </div>
   );
 };
