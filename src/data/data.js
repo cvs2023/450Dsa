@@ -14,7 +14,7 @@ export const dataObj = [
   {
     id: 3,
     questions: 20,
-    level: "Medium",
+    level: "Beginner",
     topic: "Strings",
   },
   {
@@ -54,7 +54,7 @@ export const dataObj = [
     questions: 30,
 
     level: "Medium",
-    topic: "Bit Manipulation",
+    topic: "BitManipulation",
   },
   {
     id: 9,

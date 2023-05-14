@@ -30,6 +30,7 @@
 }
 .highlighter-content {
   height: 3rem;
+  margin-left: 1rem;
   color: #f43232;
   font-weight: 800;
   font-size: xx-large;
@@ -71,10 +72,10 @@
   color: rgb(14, 21, 28);
 }
 .navbar {
-  display: grid;
+  display: flex;
+  justify-content: center;
   gap: 1rem;
-  grid-template-columns: 1.63fr 1fr;
-  align-items: end;
+  align-items: center;
 }
 .second-nav {
   display: flex;

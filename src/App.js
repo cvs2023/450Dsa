@@ -1,12 +1,17 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 import { BrowserRouter as Main, Route, Routes } from "react-router-dom";
-import { Topic } from "./components/topics";
 import { Navbar } from "./components/navbar/navbar";
 import { SecondNav } from "./components/secondNav/SecondNav";
 import HighLighter from "./components/navbar/highlighter";
+import Beginner from "./components/secondNav/Beginner";
+import Medium from "./components/secondNav/Medium";
+import Advanced from "./components/secondNav/Advanced";
+//
+export const globalObj = createContext();
 
+//indexdb
 const indexedDB = window.indexedDB;
 const indexDBCycle = () => {
   // check present
@@ -36,46 +41,49 @@ const indexDBCycle = () => {
 
   // add data in store - data, key
   request.onsuccess = function (event) {
-    console.log("Database opened successfully");
+    // console.log("Database opened successfully");
   };
 };
+
 function App() {
   const handleTick = (event) => {
     const dbPromise = indexedDB.open("userData", 1);
   };
-  //prop
-  //useref/usereducer
-  //js
-  // console.log(window.location.pathname);
   useEffect(() => {
     indexDBCycle();
   }, []);
 
   return (
-    <div className="App">
-      <Main>
-        <Navbar />
-        <HighLighter />
-        <SecondNav />
+    <globalObj.Provider>
+      <div className="App">
+        <Main>
+          <Navbar />
+          <HighLighter />
+          <SecondNav />
 
-        <Routes>
-          <Route path="/" element={<Topic />} />
-          <Route path="/home" element={<Topic />} />
-          <Route path="/TimeComplexity" element={<Topic />} />
+          <Routes>
+            <Route path="/" element={<Beginner />} />
+            <Route path="/Beginner/Arrays" element={<Beginner />} />
+            <Route path="/Beginner/LinkedList" element={<Beginner />} />
+            <Route path="/Beginner/Strings" element={<Beginner />} />
+            <Route path="/Beginner/TimeComplexity" element={<Beginner />} />
+            <Route path="/Beginner" element={<Beginner />} />
 
-          <Route path="/Arrays" element={<Topic />} />
-          <Route path="/LinkedList" element={<Topic />} />
-          <Route path="/Strings" element={<Topic />} />
-          <Route path="/Recursion" element={<Topic />} />
-          <Route path="/Trees" element={<Topic />} />
-          <Route path="/Dp" element={<Topic />} />
-          <Route path="/Graphs" element={<Topic />} />
-        </Routes>
-      </Main>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+            <Route path="/Medium" element={<Medium />} />
+            <Route path="/Medium/Recursion" element={<Medium />} />
+            <Route path="/Medium/Trees" element={<Medium />} />
+            <Route path="/Medium/Hashing" element={<Medium />} />
+            <Route path="/Medium/BitManipulation" element={<Medium />} />
+            <Route path="/Medium/MustDo" element={<Medium />} />
+
+            <Route path="/Advanced" element={<Advanced />} />
+            <Route path="/Advanced/Graphs" element={<Advanced />} />
+            <Route path="/Advanced/Dp" element={<Advanced />} />
+            <Route path="/Advanced/Maths" element={<Advanced />} />
+          </Routes>
+        </Main>
+      </div>
+    </globalObj.Provider>
   );
 }
 
