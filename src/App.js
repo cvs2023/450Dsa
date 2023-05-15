@@ -63,17 +63,24 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Beginner />} />
+            <Route path="/Beginner" element={<Beginner />} />
+            <Route path="/Beginner/TimeComplexity" element={<Beginner />} />
+
             <Route path="/Beginner/Arrays" element={<Beginner />} />
             <Route path="/Beginner/LinkedList" element={<Beginner />} />
             <Route path="/Beginner/Strings" element={<Beginner />} />
-            <Route path="/Beginner/TimeComplexity" element={<Beginner />} />
-            <Route path="/Beginner" element={<Beginner />} />
+            <Route path="/Beginner/Stacks" element={<Beginner />} />
 
             <Route path="/Medium" element={<Medium />} />
             <Route path="/Medium/Recursion" element={<Medium />} />
             <Route path="/Medium/Trees" element={<Medium />} />
             <Route path="/Medium/Hashing" element={<Medium />} />
             <Route path="/Medium/BitManipulation" element={<Medium />} />
+            <Route path="/Medium/Backtracking" element={<Medium />} />
+            <Route path="/Medium/Greedy" element={<Medium />} />
+            <Route path="/Medium/Heaps" element={<Medium />} />
+            <Route path="/Medium/BinarySearchTrees" element={<Medium />} />
+            <Route path="/Medium/Tries" element={<Medium />} />
             <Route path="/Medium/MustDo" element={<Medium />} />
 
             <Route path="/Advanced" element={<Advanced />} />

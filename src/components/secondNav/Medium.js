@@ -12,6 +12,13 @@ const Medium = () => {
     setQuestion(respQuestionsBank);
 
     setShow(false);
+
+    //scroll down
+    scrollTo();
+    function scrollTo() {
+      const section = document.getElementById("scroll");
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
   useEffect(() => {
     const respDataObj = dataObj.filter((i) => i.level == "Medium");
@@ -45,36 +52,35 @@ const Medium = () => {
         </div>
       ) : (
         <div className="main-container">
-          <div className="container"></div>
-          <div className="">
-            <div className="flex ">
-              <Link to="/Medium">
-                <button onClick={() => setShow(true)}>Back</button>
-              </Link>
-            </div>
+          <div className="container">
+            <div className="">
+              <div className="flex ">
+                <Link to="/Medium">
+                  <button onClick={() => setShow(true)}>Back</button>
+                </Link>
+              </div>
 
-            <div className="box">
-              {question.map((i, index) => {
-                return (
-                  <div key={index}>
-                    <div className="box-questions"> {i.name}</div>
-                    <div className="">
-                      {i.questions.map((j, idx) => {
-                        return (
-                          <div key={idx} className="flex-inside">
-                            <div>{j.no} :</div>
-                            <a href={j.link} target="blank">
-                              <div>
-                                Find minimum and maximum element in an array
-                              </div>
-                            </a>
-                          </div>
-                        );
-                      })}
+              <div className="box">
+                {question.map((i, index) => {
+                  return (
+                    <div key={index}>
+                      <div className="box-questions"> {i.name}</div>
+                      <div className="">
+                        {i.questions.map((j, idx) => {
+                          return (
+                            <div key={idx} className="flex-inside">
+                              <div>{i.id} :</div>
+                              <a href={j.link} target="blank">
+                                <div>{j.title ? j.title : "null"}</div>
+                              </a>
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

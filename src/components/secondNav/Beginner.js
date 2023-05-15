@@ -10,8 +10,16 @@ const Beginner = () => {
   const handleChoseCard = (topicName) => {
     const respQuestionsBank = questionsBank.filter((i) => i.name == topicName);
     setQuestion(respQuestionsBank);
+    console.log(respQuestionsBank);
 
     setShow(false);
+
+    //scroll down
+    scrollTo();
+    function scrollTo() {
+      const section = document.getElementById("scroll");
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
   useEffect(() => {
     const respDataObj = dataObj.filter((i) => i.level == "Beginner");
@@ -62,11 +70,9 @@ const Beginner = () => {
                         {i.questions.map((j, idx) => {
                           return (
                             <div key={idx} className="flex-inside">
-                              <div>{j.no} :</div>
+                              <div>{i.id} :</div>
                               <a href={j.link} target="blank">
-                                <div>
-                                  Find minimum and maximum element in an array
-                                </div>
+                                <div>{j.title ? j.title : "null"}</div>
                               </a>
                             </div>
                           );

@@ -42,13 +42,13 @@ export const dataObj = [
     level: "Advanced",
     topic: "Dp",
   },
-  {
-    id: 8,
-    questions: 30,
+  // {
+  //   id: 8,
+  //   questions: 30,
 
-    level: "Advanced",
-    topic: "Maths",
-  },
+  //   level: "Advanced",
+  //   topic: "Maths",
+  // },
   {
     id: 9,
     questions: 30,
@@ -65,7 +65,6 @@ export const dataObj = [
   {
     id: 10,
     questions: 30,
-
     level: "Medium",
     topic: "MustDo",
   },
@@ -74,5 +73,41 @@ export const dataObj = [
     questions: 20,
     level: "Beginner",
     topic: "TimeComplexity",
+  },
+  {
+    id: 12,
+    questions: 20,
+    level: "Beginner",
+    topic: "Stacks",
+  },
+  {
+    id: 13,
+    questions: 20,
+    level: "Medium",
+    topic: "Tries",
+  },
+  {
+    id: 14,
+    questions: 20,
+    level: "Medium",
+    topic: "Heaps",
+  },
+  {
+    id: 15,
+    questions: 20,
+    level: "Medium",
+    topic: "Backtracking",
+  },
+  {
+    id: 16,
+    questions: 20,
+    level: "Medium",
+    topic: "Greedy",
+  },
+  {
+    id: 17,
+    questions: 20,
+    level: "Medium",
+    topic: "BinarySearchTrees",
   },
 ];

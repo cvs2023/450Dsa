@@ -24,7 +24,7 @@ export const Navbar = () => {
       </div>
 
       <div className="second-portion">
-        <img className="img" src={climbBlue}></img>
+        <img id="logo-glitch" className="img" src={climbBlue}></img>
       </div>
 
       <div className="second ">
