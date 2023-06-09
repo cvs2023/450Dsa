@@ -62,14 +62,23 @@ function App() {
           <SecondNav />
 
           <Routes>
-            <Route path="/" element={<Beginner />} />
-            <Route path="/Beginner" element={<Beginner />} />
-            <Route path="/Beginner/TimeComplexity" element={<Beginner />} />
+            <Route path="/" element={<Beginner shh={true} />} />
+            <Route path="/Beginner" element={<Beginner shh={true} />} />
+            <Route
+              path="/Beginner/TimeComplexity"
+              element={<Beginner shh={false} />}
+            />
 
-            <Route path="/Beginner/Arrays" element={<Beginner />} />
-            <Route path="/Beginner/LinkedList" element={<Beginner />} />
-            <Route path="/Beginner/Strings" element={<Beginner />} />
-            <Route path="/Beginner/Stacks" element={<Beginner />} />
+            <Route path="/Beginner/Arrays" element={<Beginner shh={false} />} />
+            <Route
+              path="/Beginner/LinkedList"
+              element={<Beginner shh={false} />}
+            />
+            <Route
+              path="/Beginner/Strings"
+              element={<Beginner shh={false} />}
+            />
+            <Route path="/Beginner/Stacks" element={<Beginner shh={false} />} />
 
             <Route path="/Medium" element={<Medium />} />
             <Route path="/Medium/Recursion" element={<Medium />} />

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { dataObj } from "../../data/data";
 import { questionsBank } from "../../data/questionBank";
-const Beginner = () => {
+const Beginner = ({ shh }) => {
   const [data, setData] = useState(dataObj);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(shh);
   const [question, setQuestion] = useState(questionsBank);
 
   const handleChoseCard = (topicName) => {

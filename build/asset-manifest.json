@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.409c9a05.css",
+    "main.js": "/static/js/main.a3aac668.js",
+    "static/js/787.401b42b8.chunk.js": "/static/js/787.401b42b8.chunk.js",
+    "static/media/climb-blue.png": "/static/media/climb-blue.8326843291aee0fd3eaf.png",
+    "index.html": "/index.html",
+    "main.409c9a05.css.map": "/static/css/main.409c9a05.css.map",
+    "main.a3aac668.js.map": "/static/js/main.a3aac668.js.map",
+    "787.401b42b8.chunk.js.map": "/static/js/787.401b42b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.409c9a05.css",
+    "static/js/main.a3aac668.js"
+  ]
+}
